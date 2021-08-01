@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import {  UserModule } from './user/user.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [UserModule],
+  imports: [MongooseModule.forRoot(process.env.MONGODB_URI), UserModule],
 })
 export class AppModule {}
