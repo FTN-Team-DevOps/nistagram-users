@@ -24,4 +24,9 @@ export class UserController {
   async update(@Payload() payload: UserUpdatePayloadDTO): Promise<User> {
     return await this.userService.update(payload._id, payload.data);
   }
+
+  @MessagePattern('users-get-by-ids')
+  async searchByIds(@Payload() params: string[]): Promise<User[]> {
+    return await this.userService.getByIds(params);
+  }
 }

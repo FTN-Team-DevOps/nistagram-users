@@ -13,11 +13,6 @@ export class UserService {
   ) {}
 
   async findAll(params: UserSearchDTO): Promise<User[]> {
-    if (params.private) {
-      delete params.private;
-    } else {
-      params.private = false;
-    }
     return this.userModel.find(params).exec();
   }
 
@@ -31,5 +26,9 @@ export class UserService {
       { $set: { ...user } },
       { new: true },
     );
+  }
+
+  async getByIds(ids: string[]): Promise<User[]> {
+    return Promise.all(ids.map((id) => this.userModel.findById(id)));
   }
 }
