@@ -1,0 +1,16 @@
+{
+  "_id": {
+      "$oid": "61054ba3f9da5ededc6c0ec1"
+  },
+  "username": "fmladenovic",
+  "email": "filip.mladenovic@uns.ac.rs",
+  "name": "Filip Mladenovic",
+  "phone": "0677201771",
+  "gender": "male",
+  "siteUrl": "",
+  "biography": "I am student",
+  "picture": "https://scontent.fbeg10-1.fna.fbcdn.net/v/t1.6435-9/47386422_2301956129816115_5387126833118445568_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=fIqB-2VaHEgAX8TAni5&_nc_ht=scontent.fbeg10-1.fna&oh=c8383e0c6f15746384b4af195cf514db&oe=61290052",
+  "private": false,
+  "taggable": true,
+  "status": "available"
+}
